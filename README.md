@@ -10,9 +10,11 @@ Keywords: Rough sets; Crowd simulation; Agent system; Insightful model; Social f
 
 ## Requirements
 
+- Python 3.X
 - numba >= 0.56, 
 - numpy >= 1.23
 - opencv-python >= 4.7
+- R language >= 3.6.2 
 
 Tested on: 
 - PC, Intel i7-9700 3GHz, 64 GB RAM, NVIDIA GeForce RTX 2060 GPU, Windows 10 OS,
@@ -36,7 +38,7 @@ Run scripts in following order:
 Additional scripts:
 - Plot input data to screen or file [show_input_data.py](show_input_data.py)
 - Plot rough set [sets_plots/plot_set_social.py](sets_plots/plot_set_social.py)
-- Plot trajectories of all persons walking through a bottleneck [sd](sets_plots/plot_example_trajectories.py) 
+- Plot trajectories of all persons walking through a bottleneck [sets_plots/plot_example_trajectories.py](sets_plots/plot_example_trajectories.py) 
 ## Example result plots
 
 Reference data
