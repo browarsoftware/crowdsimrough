@@ -1,4 +1,4 @@
-# ORDER OF RUN: #8
+# ORDER OF RUN: #7
 # Simulation rough set, 1,000 agents
 import cv2
 from agent import Agent

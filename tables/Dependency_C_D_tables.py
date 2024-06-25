@@ -1,5 +1,5 @@
 # ORDER OF RUN: #9
-#
+# Generate table that presents the dependency of attributes D from a set of attributes C
 import pickle
 from rough_sets_metrics import calculate_raws_sets_metrics
 

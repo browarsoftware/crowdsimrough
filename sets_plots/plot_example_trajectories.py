@@ -155,5 +155,6 @@ def read_from_cvs(file_name, separator= " ", inserto_data_to_begin_from_zero = F
             range_x, range_y, range_z, last_frame_id)
 
 
+#file_name = '../data/b090_combined.txt'
 file_name = '../data/b090_combined.txt'
 [op, opd, range_x, range_y, range_z, last_frame_id] = read_from_cvs(file_name, " ", True)

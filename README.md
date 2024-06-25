@@ -20,29 +20,41 @@ Tested on:
 
 ## How to run
 
-The program can be run with Torch backbone for networks MiDaS-S, MiDaS-H oraz MiDaS-L. Implementation is located in the folder [midas](/midas/).
-- [/midas/midas_run.py](/midas/midas_run.py) is used to run live stream video (you must have a camera connected) or to process a video file (for example, in mp4 format). There are a number of options such as resolution setting, max disparity, stereo pair generation configuration for the resulting video (vertical or horizontal) and many others. Videos on which qualitative (user) studies were performed based on the pixabay collection can be downloaded from [CLICK!](https://drive.google.com/drive/folders/1xt5gVhP2kyXIWQe8xpC3nwCDejKFD0Zw?usp=sharing
-)
-- [/midas/midas_evaluation.py](/midas/midas_evaluation.py) evaluation of the method on KITTI dataset [CLICK!](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo) 
+Run scripts in following order:
+1. Generate input data [data_reader_calculate_forces.py](data_reader_calculate_forces.py)
+2. Further process the input data [generate_input_data.R](generate_input_data.R)
+3. Generate rough sets (this will create large files) [generate_rough_sets.py](generate_rough_sets.py)
+4. Social forces simulation 1,000 agents [simulation_social_forces_loop_all.py](simulation_social_forces_loop_all.py)
+5. Social forces simulation, data from file [simulate_social_forces_from_file.py](simulate_social_forces_from_file.py)
+6. Rough sets simulation, data from file [simulation_rough_set_from_file.py](simulation_rough_set_from_file.py)
+7. Simulation rough set, 1,000 agents [simulation_rough_set_loop_all.py](simulation_rough_set_loop_all.py)
+8. Generate reference data from csv [generate_reference_data.py](generate_reference_data.py)
+9. Generate table that presents the dependency of attributes D from a set of attributes C [tables/Dependency_C_D_tables.py](tables/Dependency_C_D_tables.py)
+10. Generate table that presents values of accuracy of approximation etc. [tables/eval_tables.py](tables/eval_tables.py)
+11. Generate table that presents the results of the logarithm of cumulated crowd density comparison between actual data and results obtained by the social forces algorithm and rough set-based algorithm [tables/MSE_tables.py](tables/MSE_tables.py)
 
-The program can be run with Tensorflow/Keras backbone for networks DenseDepth (download weights from [here](https://drive.google.com/file/d/19dfvGvDfCRYaqxVKypp1fRHwK7XtSjVu/view)) and DenseDepth-Small. Implementation is located in the folder [densedepth](/densedepth/).
-- [/densedepth/dense_depth_run.py](/densedepth/dense_depth_run.py) is used to run live stream video (you must have a camera connected)
-- [/densedepth/dense_depth_evaluation.py](/densedepth/dense_depth_evaluation.py) evaluation of the method on KITTI dataset [CLICK!](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo) 
+Additional scripts:
+- Plot input data to screen or file [show_input_data.py](show_input_data.py)
+- Plot rough set [sets_plots/plot_set_social.py](sets_plots/plot_set_social.py)
+- Plot trajectories of all persons walking through a bottleneck [sd](sets_plots/plot_example_trajectories.py) 
+## Example result plots
 
-The implementation that evaluate deep3d method on the KITTI and pixabay datasets can be found in the folder [deep3d](/deep3d/). In order to execute it download [Deep3D](https://github.com/HypoX64/Deep3D) and copy file [/deep3d/deep3d_evaluation.py](/deep3d/deep3d_evaluation.py) into Deep3D project folder.
+Reference data
 
-In each script set the appropriate paths under which the downloaded data is locally located and output paths for the converted video!
+![alt text](fig/reference90/00200.png)
 
-Suggested configuration for mp4 video: DIBR + MiDaS + FAST inapint, max disparity = 75.
+Trajectories of all persons walking through a bottleneck
 
+![alt text](image/tp.png)
 
-## Example resutls on benchmark images
+The logarithm of the cumulated crowd density which is defined as the total time number of iteration of simulation when a certain cell in simulation grid was occupied by an agent.
 
-Right image stereo pair is estimated from left image. Algorithm: DIBR + MiDaS + FAST inapint, max disparity = 25.
+![alt text](image/rougfromfile90.0.5.png)
 
-![alt text](image/mandrill.gif) ![alt text](image/pepper.gif)
-![alt text](image/barbara.gif) ![alt text](image/roof.gif)
-![alt text](image/lena.gif) ![alt text](image/pot.gif)
+This figure visualizes the rough set generated from a dataset with a bottleneck width equal to 100 cm with conditional attributes C7.
+
+![alt text](image/rs.png)
+
 
 ## Data source
 

@@ -1,5 +1,5 @@
-# ORDER OF RUN: #7
-# Reference data
+# ORDER OF RUN: #8
+# Generate reference data
 import cv2
 import numpy as np
 from data_reader import read_from_cvs

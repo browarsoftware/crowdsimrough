@@ -1,5 +1,5 @@
 # ORDER OF RUN: #10
-#
+# Generate table that presents values of accuracy of approximation etc.
 
 import pickle
 import sys

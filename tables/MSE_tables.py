@@ -1,5 +1,5 @@
 # ORDER OF RUN: #11
-#
+# Generate table that presents the results of the logarithm of cumulated crowd density comparison between actual data and results obtained by the social forces algorithm and rough set-based algorithm
 import pickle
 import numpy as np
 
