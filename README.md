@@ -22,18 +22,18 @@ Tested on:
 
 ## How to run
 
-Run scripts in following order:
+Run scripts in the following order:
 1. Generate input data [data_reader_calculate_forces.py](data_reader_calculate_forces.py)
-2. Further process the input data [generate_input_data.R](generate_input_data.R)
+2. Further, process the input data [generate_input_data.R](generate_input_data.R)
 3. Generate rough sets (this will create large files) [generate_rough_sets.py](generate_rough_sets.py)
 4. Social forces simulation 1,000 agents [simulation_social_forces_loop_all.py](simulation_social_forces_loop_all.py)
 5. Social forces simulation, data from file [simulate_social_forces_from_file.py](simulate_social_forces_from_file.py)
 6. Rough sets simulation, data from file [simulation_rough_set_from_file.py](simulation_rough_set_from_file.py)
 7. Simulation rough set, 1,000 agents [simulation_rough_set_loop_all.py](simulation_rough_set_loop_all.py)
 8. Generate reference data from csv [generate_reference_data.py](generate_reference_data.py)
-9. Generate table that presents the dependency of attributes D from a set of attributes C [tables/Dependency_C_D_tables.py](tables/Dependency_C_D_tables.py)
-10. Generate table that presents values of accuracy of approximation etc. [tables/eval_tables.py](tables/eval_tables.py)
-11. Generate table that presents the results of the logarithm of cumulated crowd density comparison between actual data and results obtained by the social forces algorithm and rough set-based algorithm [tables/MSE_tables.py](tables/MSE_tables.py)
+9. Generate a table that presents the dependency of attributes D from a set of attributes C [tables/Dependency_C_D_tables.py](tables/Dependency_C_D_tables.py)
+10. Generate a table that presents values of the accuracy of the approximation, etc. [tables/eval_tables.py](tables/eval_tables.py)
+11. Generate a table that presents the results of the logarithm of cumulated crowd density comparison between actual data and results obtained by the social forces algorithm and rough set-based algorithm [tables/MSE_tables.py](tables/MSE_tables.py)
 
 Additional scripts:
 - Plot input data to screen or file [show_input_data.py](show_input_data.py)
@@ -49,7 +49,7 @@ Trajectories of all persons walking through a bottleneck
 
 ![alt text](image/tp.png)
 
-The logarithm of the cumulated crowd density which is defined as the total time number of iteration of simulation when a certain cell in simulation grid was occupied by an agent.
+The logarithm of the cumulated crowd density is defined as the total number of iterations of simulation when an agent occupies a certain cell in the simulation grid.
 
 ![alt text](image/rougfromfile90.0.5.png)
 
@@ -60,4 +60,4 @@ This figure visualizes the rough set generated from a dataset with a bottleneck 
 
 ## Data source
 
-Data downloaded from archive of experimental data from studies about pedestrian dynamics [link](https://ped.fz-juelich.de/database/doku.php)
+Data downloaded from the archive of experimental data from studies about pedestrian dynamics [link](https://ped.fz-juelich.de/database/doku.php)
