@@ -4,7 +4,9 @@
 
 Author: [Tomasz Hachaj](https://home.agh.edu.pl/~thachaj/) [Jarosław Wąs](https://home.agh.edu.pl/~jarek/)
 
-<!--Algorithms for converting 2D to 3D are gaining importance following the hiatus brought about by the discontinuation of 3D TV production; this is due to the high availability and popularity of virtual reality systems that use stereo vision. In this paper, several depth image-based rendering (DIBR) approaches using state-of-the-art single-frame depth generation neural networks and inpaint algorithms are proposed and validated, including a novel very fast inpaint (FAST). FAST significantly exceeds the speed of currently used inpaint algorithms by reducing computational complexity, without degrading the quality of the resulting image. The role of the inpaint algorithm is to fill in missing pixels in the stereo pair estimated by DIBR. Missing estimated pixels appear at the boundaries of areas that differ significantly in their estimated distance from the observer. In addition, we propose parameterizing DIBR using a singular, easy-to-interpret adaptable parameter that can be adjusted online according to the preferences of the user who views the visualization. This single parameter governs both the camera parameters and the maximum binocular disparity. The proposed solutions are also compared with a fully automatic 2D to 3D mapping solution. The algorithm proposed in this work, which features intuitive disparity steering, the foundational deep neural network MiDaS, and the FAST inpaint algorithm, received considerable acclaim from evaluators. The mean absolute error of the proposed solution does not contain statistically significant differences from state-of-the-art approaches like Deep3D and other DIBR-based approaches using different inpaint functions. Since both the source codes and the generated videos are available for download, all experiments can be reproduced, and one can apply our algorithm to any selected video or single image to convert it.
+Abstract:
+
+Data-driven crowd simulation with insightful principles is an open, real-world, and challenging task. The issues involved in modeling crowd movement so that agents' decision-making processes can be interpreted provide opportunities to learn about the mechanisms of crowd formation and dispersion and how groups cope with overcoming obstacles. In this article, we propose a novel agent-based simulation algorithm to infer practical knowledge of a problem from the real world by modeling the domain knowledge available to an agent using rough sets. As far as we know, the method proposed in our work is the first approach that integrates a well-established agent-based simulation model of social forces, an insightful knowledge representation using rough sets, and Bayes probability inference that models the stochastic nature of motion. Our approach has been tested on real datasets representing crowds traversing bottlenecks of varying widths. We also conducted a test on numerous artificial datasets involving 1,000 agents. We obtained satisfactory results that confirm the effectiveness of the proposed method. The dataset and source codes are available for download so our experiments can be reproduced.
 -->
 Keywords: Rough sets; Crowd simulation; Agent system; Insightful model; Social forces; Bottleneck problem
 
@@ -61,3 +63,24 @@ This figure visualizes the rough set generated from a dataset with a bottleneck 
 ## Data source
 
 Data downloaded from the archive of experimental data from studies about pedestrian dynamics [link](https://ped.fz-juelich.de/database/doku.php)
+
+## Full text
+
+[https://www.sciencedirect.com/science/article/abs/pii/S0020025524015846](https://www.sciencedirect.com/science/article/abs/pii/S0020025524015846)
+
+##Cite as
+
+Tomasz Hachaj, Jarosław Wąs, An insightful data-driven crowd simulation model based on rough sets, Information Sciences, Volume 692, 2025, 121670, ISSN 0020-0255, https://doi.org/10.1016/j.ins.2024.121670
+
+Bibtex:
+
+@article{HACHAJ2025121670,\
+title = {An insightful data-driven crowd simulation model based on rough sets},\
+journal = {Information Sciences},\
+volume = {692},\
+pages = {121670},\
+year = {2025},\
+issn = {0020-0255},\
+doi = {https://doi.org/10.1016/j.ins.2024.121670}, \
+url = {https://www.sciencedirect.com/science/article/pii/S0020025524015846} \
+}
