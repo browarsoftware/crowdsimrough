@@ -68,7 +68,7 @@ Data downloaded from the archive of experimental data from studies about pedestr
 
 [https://www.sciencedirect.com/science/article/abs/pii/S0020025524015846](https://www.sciencedirect.com/science/article/abs/pii/S0020025524015846)
 
-##Cite as
+## Cite as
 
 Tomasz Hachaj, Jarosław Wąs, An insightful data-driven crowd simulation model based on rough sets, Information Sciences, Volume 692, 2025, 121670, ISSN 0020-0255, https://doi.org/10.1016/j.ins.2024.121670
 
